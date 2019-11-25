@@ -5,6 +5,7 @@ import Main from './Main/Main';
 import FrontPage from './FrontPage/FrontPage';
 import NotFound from './NotFound/NotFound';
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import Navigation from "./Navigation/Navigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Navigation />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
