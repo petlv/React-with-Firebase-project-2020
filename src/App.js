@@ -35,7 +35,6 @@ function App() {
           </a>
         </header>
       </div>
-      <FrontPage/>
 
       <Switch>
         <Route path="/" exact><Redirect to="/home" /></Route>

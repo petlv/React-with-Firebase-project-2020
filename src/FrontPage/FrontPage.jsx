@@ -7,7 +7,7 @@ const FrontPage = () => {
     return (
         <div>
             <CarouselComp />
-            <Map />
+            {/*<Map />*/}
             Home page
         </div>
     )

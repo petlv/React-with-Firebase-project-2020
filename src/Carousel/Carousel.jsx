@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import 'holderjs';
 
 const CarouselComp = () => {
     return (
@@ -7,7 +8,8 @@ const CarouselComp = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=First slide&bg=373940"
+                    src="holder.js/800x400?text=First slide--P&bg=373940"
+                    // src="sample/slide-03.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption>
