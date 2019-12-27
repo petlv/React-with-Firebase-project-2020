@@ -1,7 +1,8 @@
-.Navigation {
-
-}
-
-#logo {
-    width: 56px;
+.bg-navbar {
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #09d3ac;
+    color: #282c34;
+    margin-bottom: 10px;
 }
