@@ -1,3 +1,13 @@
+.text-left {
+    text-align: left;
+}
+
+Form.Check {
+    font-weight: lighter;
+}
+
+
+/*
 .Login, .Register {
     width: 83%;
     display: inline-block;
@@ -18,15 +28,11 @@ label {
 }
 
 input {
-    text-align: center;
-    border:1px solid #234465;
-    padding: 1%;
-    width: 50%;
-    border-radius: 6px;
-    color: #234465;
+    text-align: center; border:1px solid #234465; padding: 1%;
+    width: 50%; border-radius: 6px; color: #234465;
 }
 
 form button {
     width: auto;
     padding: 2%;
-}
+}*/

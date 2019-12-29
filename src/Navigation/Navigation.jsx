@@ -21,12 +21,17 @@ const Navigation = ({ isLogged }) => {
                     />
                 </Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Nav.Link className="mr-2" href="/home">Home</Nav.Link>
+                    <Nav.Link className="mr-2" href="/hotels/all">Browse hotels</Nav.Link>
+                    <Nav.Link className="mr-2" href="/comments/latest">Latest comments</Nav.Link>
+                    <Nav.Link className="mr-2" href="/rankings">Rankings</Nav.Link>
+                </Nav>
+                <Nav className="ml-auto mr-4">
+                    <Nav.Link className="mr-2" href="/login">Login</Nav.Link>
+                    <Nav.Link className="mr-2" href="/register">Register</Nav.Link>
                 </Nav>
                 <Form inline>
-                    <FormControl size="lg" type="text" placeholder="Search" className="mr-sm-2" />
+                    <FormControl size="lg" type="text" placeholder="Search for a hotel" className="mr-sm-2" />
                     <Button variant="outline-light" size="lg">Search</Button>
                 </Form>
             </Navbar>

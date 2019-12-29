@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Main from './Main/Main';
 import FrontPage from './FrontPage/FrontPage';
 import Footer from './Footer/Footer';
+import Register from './Register/Register';
+import Login from './Login/Login';
 import NotFound from './NotFound/NotFound';
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
@@ -38,6 +40,8 @@ function App() {
           <Switch>
               <Route path="/" exact><Redirect to="/home" /></Route>
               <Route path="/home" exact render={render('Home', FrontPage)} />
+              <Route path="/login" exact render={render('Login', Login)} />
+              <Route path="/register" exact render={render('Register', Register)} />
               <Route path="*">
                   <Main title="Not Found"><NotFound /></Main>
               </Route>
