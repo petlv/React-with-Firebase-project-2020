@@ -27,6 +27,7 @@ const Navigation = ({ isLogged }) => {
                     <Nav.Link className="mr-2" href="/rankings">Rankings</Nav.Link>
                 </Nav>
                 <Nav className="ml-auto mr-4">
+                    <Nav.Link eventKey="disabled" disabled>HotelComments.com</Nav.Link>
                     <Nav.Link className="mr-2" href="/login">Login</Nav.Link>
                     <Nav.Link className="mr-2" href="/register">Register</Nav.Link>
                 </Nav>

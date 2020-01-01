@@ -6,6 +6,11 @@ import { StoreContext } from '../Store/Store';
 import { login } from '../Store/actions';
 
 import { useFormControl, getValidationsRunnerForSchema } from '../shared/hocs/withForm';
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 const validations = {
     username: yup.string()
@@ -43,7 +48,47 @@ const Login = () => {
         })
     }, [usernameFormControl, passwordFormControl, dispatch]);
 
-    return <form className="Login">
+    return <main className="my-5 py-5">
+        <Container className="px-0 col-xl-4">
+            <Form>
+                <Form.Group as={Row} controlId="username">
+                    <Form.Label column sm={2}>
+                        Username
+                    </Form.Label>
+                    <Col sm={10}>
+                        <Form.Control size="lg" type="text" placeholder="Username"
+                                      onChange={usernameFormControl.changeHandler} />
+                    </Col>
+                    {usernameFormControl.errors && usernameFormControl.errors[0]}
+                </Form.Group>
+
+                <Form.Group as={Row} controlId="password">
+                    <Form.Label column sm={2}>
+                        Password
+                    </Form.Label>
+                    <Col sm={10}>
+                        <Form.Control size="lg" type="password" placeholder="Password"
+                                      onChange={passwordFormControl.changeHandler}/>
+                    </Col>
+                    {passwordFormControl.errors && passwordFormControl.errors[0]}
+                </Form.Group>
+
+                <Form.Group as={Row} controlId="rememberMe">
+                    <Col sm={{ span: 10, offset: 2 }} >
+                        <Form.Check inline label="Remember me" />
+                    </Col>
+                </Form.Group>
+
+                <Form.Group as={Row}>
+                    <Col sm={{ span: 10, offset: 2 }}>
+                        <Button type="button" onClick={submitHandler} size="lg" className="my-4">Login</Button>
+                    </Col>
+                </Form.Group>
+            </Form>
+        </Container>
+    </main>
+
+    /*<form className="Login">
         <div className="form-control">
             <label>Username</label>
             <input type="text" onChange={usernameFormControl.changeHandler} />
@@ -58,7 +103,7 @@ const Login = () => {
         <div className="form-control">
             <button type="button" onClick={submitHandler}>Login</button>
         </div>
-    </form>;
+    </form>;*/
 };
 
 export default Login;

@@ -40,57 +40,81 @@ class Register extends React.Component {
         const rePasswordError = this.getFirstControlError('rePassword');
 
         return <main className="my-5 py-5">
-            <Container className="px-0 col-xl-4">
+            <Container className="px-0 col-4">
                 <Form>
-                    <Form.Group as={Row} controlId="formHorizontalEmail">
-                        <Form.Label column sm={2}>
+                    <Form.Group as={Row} controlId="username">
+                        <Form.Label column sm={4} className="text-right">
+                            Username
+                        </Form.Label>
+                        <Col sm={8}>
+                            <Form.Control size="lg" type="text" placeholder="Username"
+                                          onChange={this.usernameOnChangeHandler} />
+                        </Col>
+                        {usernameError && <div className="error">{usernameError}</div>}
+                    </Form.Group>
+
+                    <Form.Group as={Row} controlId="email">
+                        <Form.Label column sm={4} className="text-right">
                             Email
                         </Form.Label>
-                        <Col sm={10}>
-                            <Form.Control size="lg" type="email" placeholder="Email" />
+                        <Col sm={8}>
+                            <Form.Control size="lg" type="email" placeholder="Email"
+                                          onChange={this.usernameOnChangeHandler} />
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formHorizontalPassword">
-                        <Form.Label column sm={2}>
+                    <Form.Group as={Row} controlId="password">
+                        <Form.Label column sm={4} className="text-right">
                             Password
                         </Form.Label>
-                        <Col sm={10}>
-                            <Form.Control size="lg" type="password" placeholder="Password" />
+                        <Col sm={8}>
+                            <Form.Control size="lg" type="password" placeholder="Password"
+                                          onChange={this.passwordOnChangeHandler} />
                         </Col>
+                        {passwordError && <div className="error">{passwordError}</div>}
                     </Form.Group>
+
+                    <Form.Group as={Row} controlId="rePassword">
+                        <Form.Label column sm={4} className="text-right">
+                            Retype password
+                        </Form.Label>
+                        <Col sm={8}>
+                            <Form.Control size="lg" type="password" placeholder="Retype password"
+                                          onChange={this.rePasswordOnChangeHandler} />
+                        </Col>
+                        {rePasswordError && <div className="error">{rePasswordError}</div>}
+                    </Form.Group>
+
                     <fieldset>
                         <Form.Group as={Row}>
-                            <Form.Label as="legend" column sm={2}>
-                                Radios
+                            <Form.Label as="legend" column sm={4} className="text-right">
+                                Role
                             </Form.Label>
-                            <Col sm={10} className="text-left">
+                            <Col sm={8} className="text-center">
                                 <Form.Check
                                     type="radio"
                                     inline
-                                    label="first radio"
+                                    label="hotelier"
                                     name="formHorizontalRadios"
                                     id="formHorizontalRadios1"
+                                    className="px-2"
                                 />
                                 <Form.Check
                                     type="radio"
                                     inline
-                                    label="second radio"
+                                    label="tourist"
                                     name="formHorizontalRadios"
                                     id="formHorizontalRadios2"
+                                    className="px-2"
                                 />
                             </Col>
                         </Form.Group>
                     </fieldset>
-                    <Form.Group as={Row} controlId="formHorizontalCheck">
-                        <Col sm={{ span: 10, offset: 2 }} >
-                            <Form.Check inline label="Remember me" />
-                        </Col>
-                    </Form.Group>
 
                     <Form.Group as={Row}>
                         <Col sm={{ span: 10, offset: 2 }}>
-                            <Button type="submit" size="lg" className="my-4">Register</Button>
+                            <Button type="button" size="lg" className="my-4"
+                                    onClick={this.submitHandler}>Register</Button>
                         </Col>
                     </Form.Group>
                 </Form>
