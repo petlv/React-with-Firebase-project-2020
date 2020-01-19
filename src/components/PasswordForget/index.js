@@ -60,6 +60,10 @@ class PasswordForgetFormBase extends Component {
         );
     }
 
+    componentWillUnmount() {
+        this.setState({ confirmEmailSent: false });
+    }
+
     render() {
         const { email, error, confirmEmailSent } = this.state;
         const isInvalid = email === '';
