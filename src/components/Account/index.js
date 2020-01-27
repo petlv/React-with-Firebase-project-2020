@@ -169,6 +169,7 @@ class DefaultLoginToggle extends Component {
         const { passwordOne, passwordTwo } = this.state;
         const isInvalid =
             passwordOne !== passwordTwo || passwordOne === '';
+
         return isEnabled ? (
             <button
                 type="button"
