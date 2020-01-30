@@ -13,7 +13,10 @@ const withEmailVerification = Component => {
     class WithEmailVerification extends React.Component {
         constructor(props) {
             super(props);
-            this.state = { isSent: false };
+            this.state = {
+                isSent: false,
+                ...props.location.state,
+            };
         }
 
         onSendEmailVerification = () => {

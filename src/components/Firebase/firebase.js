@@ -23,6 +23,8 @@ class Firebase {
 
         this.googleProvider = new app.auth.GoogleAuthProvider();
         this.facebookProvider = new app.auth.FacebookAuthProvider();
+        this.auth.languageCode = 'bg';
+        //this.auth.useDeviceLanguage();
     }
 
     // *** Auth API ***
