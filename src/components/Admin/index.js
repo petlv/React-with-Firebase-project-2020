@@ -90,6 +90,7 @@ class UserItemBase extends Component {
         this.state = {
             loading: false,
             user: null,
+            isPasswordReset: false,
             ...props.location.state,
         };
     }
@@ -113,7 +114,9 @@ class UserItemBase extends Component {
     }
 
     onSendPasswordResetEmail = () => {
-        this.props.firebase.doPasswordReset(this.state.user.email);
+        this.props.firebase
+            .doPasswordReset(this.state.user.email)
+            .then(() => this.setState({ isPasswordReset: true }));
     };
 
     render() {
@@ -137,6 +140,7 @@ class UserItemBase extends Component {
                           <button
                               type="button"
                               onClick={this.onSendPasswordResetEmail}
+                              disabled={this.state.isPasswordReset}
                           >
                             Send Password Reset
                           </button>
