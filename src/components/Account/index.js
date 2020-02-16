@@ -5,6 +5,7 @@ import { AuthUserContext, withAuthorization, withEmailVerification } from '../Se
 import { withFirebase } from '../Firebase';
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
+import styles from "./Account.module.css";
 
 const SIGN_IN_METHODS = [
     {
@@ -24,7 +25,7 @@ const SIGN_IN_METHODS = [
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
-            <div>
+            <div className={styles['body']}>
                 <h1>Account: {authUser.email}</h1>
                 <PasswordForgetForm />
                 <PasswordChangeForm />

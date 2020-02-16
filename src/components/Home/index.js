@@ -5,9 +5,10 @@ import {
     withEmailVerification,
 } from '../Session';
 import Messages from "../Messages";
+import styles from "./Home.module.css";
 
 const HomePage = () => (
-    <div>
+    <div className={styles['body']}>
         <h1>Home Page</h1>
         <p>The Home Page is accessible by every signed in user.</p>
 

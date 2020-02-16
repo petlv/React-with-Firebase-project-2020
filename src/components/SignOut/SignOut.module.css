@@ -1,0 +1,15 @@
+.navigation-list-item-anchor {
+    font-size: inherit;
+    outline: none;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+.navigation-list-item-anchor:visited {
+    color: #ffffff;
+}
+.navigation-list-item-anchor:hover {
+    color: #525dce;
+}
