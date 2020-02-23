@@ -1,6 +1,8 @@
 .navigation-list-item-anchor {
     font-size: inherit;
+    font-weight: normal;
     outline: none;
+    margin: 0;
     padding: 0;
     border: 0;
     text-decoration: none;
@@ -11,5 +13,10 @@
     color: #ffffff;
 }
 .navigation-list-item-anchor:hover {
-    color: #525dce;
+    color: #ffce00;
+    font-weight: normal;
+    background-color: inherit;
+}
+.navigation-list-item-anchor:focus {
+    color: #ffce00;
 }

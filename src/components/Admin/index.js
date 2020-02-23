@@ -4,6 +4,7 @@ import { compose } from 'recompose';
 
 import { withAuthorization, withEmailVerification } from '../Session';
 import {UserList, UserItem} from "../Users";
+import {RegisterLocationForm, RegisterLocationLink} from "../RegisterLocation";
 import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
 import styles from "./Admin.module.css";
@@ -12,8 +13,11 @@ const AdminPage = () => (
     <div className={styles['body']}>
         <h1>Admin</h1>
         <p>The Admin Page is accessible by every signed in admin user.</p>
+        <RegisterLocationLink/>
 
         <Switch>
+            <Route path={ROUTES.ADMIN_LOCATIONS_NEW} component={RegisterLocationForm} />
+            {/*<Route path={ROUTES.ADMIN_LOCATIONS} component={UserList} />*/}
             <Route path={ROUTES.ADMIN_DETAILS} component={UserItem} />
             <Route path={ROUTES.ADMIN} component={UserList} />
         </Switch>

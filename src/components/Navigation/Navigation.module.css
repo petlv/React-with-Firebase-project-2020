@@ -1,5 +1,6 @@
 .navigation {
-    background-color: #222;
+    background-color: #567d46;
+    margin: 0;
 }
 .navigation-list {
     list-style: none;
@@ -7,6 +8,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .navigation-list-item {
     margin: 10px 20px;
@@ -19,5 +21,9 @@
     color: #ffffff;
 }
 .navigation-list-item-anchor:hover {
-    color: #525dce;
+    color: #ffce00;
+    font-weight: normal;
+}
+.navigation-list-item-anchor:focus {
+    color: #ffce00;
 }

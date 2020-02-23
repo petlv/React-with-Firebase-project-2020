@@ -5,24 +5,30 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.18",
     "@amcharts/amcharts4-geodata": "^4.1.9",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "bootstrap": "^4.3.1",
+    "canvas": "^2.6.1",
     "fast-json-stable-stringify": "^2.1.0",
     "firebase": "^7.6.1",
-    "firebase-tools": "^7.12.1",
+    "firebase-tools": "^7.13.0",
+    "formik": "^2.1.4",
     "holderjs": "^2.9.6",
     "jquery": "^3.4.1",
+    "jsdom": "13.0.0",
     "json-stringify-safe": "^5.0.1",
     "popper.js": "^1.16.0",
     "react": "^16.12.0",
-    "react-async-script-loader": "^0.3.0",
     "react-bootstrap": "^1.0.0-beta.15",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "recompose": "^0.30.0",
+    "typescript": "^3.8.2",
+    "xmldom": "0.1.27",
     "yup": "^0.28.0"
   },
   "scripts": {
@@ -45,5 +51,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "peerDependencies": {}
 }
